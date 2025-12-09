@@ -1,0 +1,194 @@
+[
+  {
+    "id": "001",
+    "title": "iPhone 15 Pro 256GB Титановый",
+    "category": "Электроника",
+    "price": 95000,
+    "min_price": 88000,
+    "stock": 3,
+    "weight": 0.221,
+    "dimensions": {
+      "length": 15.0,
+      "width": 7.1,
+      "height": 0.83
+    },
+    "description": "Новый iPhone 15 Pro с титановым корпусом. Чип A17 Pro, тройная камера 48MP. Состояние идеальное, все пломбы на месте.",
+    "characteristics": {
+      "Процессор": "Apple A17 Pro",
+      "Память": "256 GB",
+      "Оперативная память": "8 GB",
+      "Экран": "6.1 дюйма OLED",
+      "Камера": "48 MP + 12 MP + 12 MP"
+    },
+    "warranty": "12 месяцев официальная гарантия Apple",
+    "quality_notes": "Новый, запечатанный. Все документы, чек в комплекте.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 5,
+    "meeting_locations": ["Метро Маяковская", "Метро Белорусская", "ТЦ Европейский"]
+  },
+  {
+    "id": "002",
+    "title": "MacBook Pro 14 M3 Pro 18GB/512GB",
+    "category": "Электроника",
+    "price": 185000,
+    "min_price": 175000,
+    "stock": 1,
+    "weight": 1.6,
+    "dimensions": {
+      "length": 31.26,
+      "width": 22.12,
+      "height": 1.55
+    },
+    "description": "MacBook Pro 14 дюймов с чипом M3 Pro. Идеальное состояние, куплен 2 месяца назад. Полный комплект с коробкой.",
+    "characteristics": {
+      "Процессор": "Apple M3 Pro",
+      "Память": "512 GB SSD",
+      "Оперативная память": "18 GB",
+      "Экран": "14.2 дюйма Liquid Retina XDR",
+      "Батарея": "До 18 часов"
+    },
+    "warranty": "10 месяцев официальной гарантии",
+    "quality_notes": "Отличное состояние, без царапин. Циклов батареи: 12. Все оригинальное.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 3,
+    "meeting_locations": ["Метро Маяковская", "Офис на Тверской"]
+  },
+  {
+    "id": "003",
+    "title": "Игровой ПК RTX 4070 Ti / Ryzen 7 5800X",
+    "category": "Компьютеры",
+    "price": 125000,
+    "min_price": 120000,
+    "stock": 1,
+    "weight": 15.0,
+    "dimensions": {
+      "length": 50.0,
+      "width": 23.0,
+      "height": 48.0
+    },
+    "description": "Мощный игровой компьютер. RTX 4070 Ti, Ryzen 7 5800X, 32GB RAM, 1TB NVMe SSD. Собран 6 месяцев назад.",
+    "characteristics": {
+      "Процессор": "AMD Ryzen 7 5800X",
+      "Видеокарта": "NVIDIA RTX 4070 Ti 12GB",
+      "Оперативная память": "32 GB DDR4 3600MHz",
+      "Накопитель": "1 TB NVMe SSD Samsung 980 Pro",
+      "Блок питания": "750W 80+ Gold",
+      "Корпус": "NZXT H510 Elite"
+    },
+    "warranty": "Гарантия на комплектующие от производителей (разная по компонентам)",
+    "quality_notes": "Отличное состояние, регулярная чистка. Все работает идеально.",
+    "bargaining_allowed": false,
+    "max_discount_percent": 0,
+    "meeting_locations": ["Метро Белорусская", "Можно доставка курьером"]
+  },
+  {
+    "id": "004",
+    "title": "AirPods Pro 2 поколения USB-C",
+    "category": "Аксессуары",
+    "price": 18500,
+    "min_price": 17000,
+    "stock": 5,
+    "weight": 0.056,
+    "dimensions": {
+      "length": 6.05,
+      "width": 4.54,
+      "height": 2.14
+    },
+    "description": "Новые запечатанные AirPods Pro 2 с USB-C. Активное шумоподавление, пространственный звук.",
+    "characteristics": {
+      "Тип": "Беспроводные TWS наушники",
+      "Шумоподавление": "Активное",
+      "Время работы": "До 6 часов (до 30 с кейсом)",
+      "Зарядка": "USB-C, Qi, MagSafe",
+      "Защита": "IPX4"
+    },
+    "warranty": "12 месяцев официальная гарантия Apple",
+    "quality_notes": "Новые, запечатанные. Оригинальные, с чеком.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 8,
+    "meeting_locations": ["Метро Маяковская", "Метро Белорусская", "Метро Пушкинская"]
+  },
+  {
+    "id": "005",
+    "title": "Samsung Galaxy S24 Ultra 12/512GB",
+    "category": "Электроника",
+    "price": 98000,
+    "min_price": 93000,
+    "stock": 2,
+    "weight": 0.232,
+    "dimensions": {
+      "length": 16.22,
+      "width": 7.92,
+      "height": 0.86
+    },
+    "description": "Samsung Galaxy S24 Ultra в титановом корпусе. Snapdragon 8 Gen 3, камера 200MP, S Pen в комплекте.",
+    "characteristics": {
+      "Процессор": "Snapdragon 8 Gen 3",
+      "Память": "512 GB",
+      "Оперативная память": "12 GB",
+      "Экран": "6.8 дюйма Dynamic AMOLED 2X 120Hz",
+      "Камера": "200 MP + 50 MP + 12 MP + 10 MP",
+      "Батарея": "5000 mAh"
+    },
+    "warranty": "12 месяцев официальная гарантия Samsung",
+    "quality_notes": "Новый, запечатанный. Официальная гарантия РФ.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 4,
+    "meeting_locations": ["Метро Маяковская", "ТЦ Европейский"]
+  },
+  {
+    "id": "006",
+    "title": "Монитор LG UltraGear 27\" 4K 144Hz",
+    "category": "Компьютерная периферия",
+    "price": 45000,
+    "min_price": 42000,
+    "stock": 2,
+    "weight": 6.5,
+    "dimensions": {
+      "length": 61.3,
+      "width": 36.6,
+      "height": 46.1
+    },
+    "description": "Игровой монитор LG 27GN950. 4K разрешение, 144Hz, 1ms, HDMI 2.1, DisplayPort 1.4. IPS матрица.",
+    "characteristics": {
+      "Диагональ": "27 дюймов",
+      "Разрешение": "3840 x 2160 (4K UHD)",
+      "Частота обновления": "144 Hz",
+      "Время отклика": "1 ms (GtG)",
+      "Матрица": "IPS",
+      "Порты": "HDMI 2.1 x2, DisplayPort 1.4, USB-C"
+    },
+    "warranty": "6 месяцев (остаток официальной)",
+    "quality_notes": "Отличное состояние, без битых пикселей, все работает. Есть оригинальная коробка.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 5,
+    "meeting_locations": ["Метро Белорусская", "Самовывоз с адреса"]
+  },
+  {
+    "id": "007",
+    "title": "Робот-пылесос Roborock S8 Pro Ultra",
+    "category": "Бытовая техника",
+    "price": 68000,
+    "min_price": 65000,
+    "stock": 1,
+    "weight": 4.5,
+    "dimensions": {
+      "length": 35.0,
+      "width": 35.0,
+      "height": 9.65
+    },
+    "description": "Топовый робот-пылесос с самоочищающейся станцией. Мощность 6000 Па, моет и пылесосит.",
+    "characteristics": {
+      "Мощность всасывания": "6000 Па",
+      "Время работы": "До 180 минут",
+      "Емкость аккумулятора": "5200 mAh",
+      "Навигация": "LiDAR + 3D камера",
+      "Функции": "Влажная уборка, самоочистка, самоопорожнение"
+    },
+    "warranty": "10 месяцев официальной гарантии",
+    "quality_notes": "Как новый, использовался 2 месяца. Полный комплект с док-станцией.",
+    "bargaining_allowed": true,
+    "max_discount_percent": 3,
+    "meeting_locations": ["Метро Маяковская", "Курьерская доставка"]
+  }
+]

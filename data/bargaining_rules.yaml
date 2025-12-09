@@ -1,0 +1,86 @@
+# Правила торга для товаров
+# Определяет стратегию переговоров по цене
+
+default_strategy:
+  # Стратегия по умолчанию
+  allow_bargaining: true
+  min_acceptable_discount: 0  # %
+  max_acceptable_discount: 10  # %
+  counter_offer_strategy: "meet_halfway"  # встречное предложение на середине
+  
+negotiation_tactics:
+  # Тактики ведения переговоров
+  initial_response:
+    - type: "polite_decline"
+      condition: "discount > max_acceptable_discount"
+      template: "К сожалению, такая скидка слишком большая. Минимальная цена {min_price} руб."
+    
+    - type: "counter_offer"
+      condition: "discount > max_acceptable_discount * 0.6"
+      template: "Могу предложить встречный вариант - {counter_price} руб. Это честная цена за товар в таком состоянии."
+    
+    - type: "accept"
+      condition: "discount <= max_acceptable_discount"
+      template: "Хорошо, договорились на {proposed_price} руб. Когда вам удобно встретиться?"
+  
+  counter_offer_calculation:
+    # Как рассчитывать встречное предложение
+    method: "proportional"  # пропорционально между текущей и предложенной
+    factor: 0.5  # коэффициент (0.5 = посередине)
+
+product_specific_rules:
+  # Правила для конкретных категорий товаров
+  electronics_new:
+    allow_bargaining: true
+    max_acceptable_discount: 5
+    reasoning: "Новый товар с гарантией, цена уже конкурентная"
+  
+  electronics_used:
+    allow_bargaining: true
+    max_acceptable_discount: 10
+    reasoning: "Б/у товар, можем обсудить цену"
+  
+  high_value:  # > 100000 руб
+    allow_bargaining: true
+    max_acceptable_discount: 3
+    reasoning: "Дорогой товар, маржа небольшая"
+  
+  accessories:
+    allow_bargaining: true
+    max_acceptable_discount: 8
+    reasoning: "Аксессуары, есть запас"
+
+special_conditions:
+  # Особые условия для торга
+  bulk_purchase:
+    min_items: 2
+    additional_discount: 5  # дополнительные 5% при покупке 2+ товаров
+  
+  quick_deal:
+    condition: "pickup_today"
+    additional_discount: 3  # дополнительные 3% если заберет сегодня
+  
+  cash_payment:
+    additional_discount: 2  # 2% скидка при оплате наличными
+
+phrases:
+  # Фразы для естественного ответа
+  decline_polite:
+    - "Спасибо за предложение, но это слишком низкая цена для этого товара."
+    - "К сожалению, не могу согласиться на такую цену. Товар в отличном состоянии."
+    - "Понимаю ваше желание сэкономить, но такая скидка невозможна."
+  
+  counter_offer:
+    - "Давайте встретимся посередине? Могу предложить {price} руб."
+    - "Как насчет {price} руб? Это справедливая цена."
+    - "Могу пойти навстречу и снизить до {price} руб. Что скажете?"
+  
+  accept:
+    - "Договорились! {price} руб вас устраивает?"
+    - "Хорошо, согласен на {price} руб."
+    - "Отлично, по рукам! {price} руб."
+  
+  explain_value:
+    - "Цена обоснована тем, что {reason}."
+    - "Учитывайте, что {reason}."
+    - "Товар стоит своих денег, потому что {reason}."

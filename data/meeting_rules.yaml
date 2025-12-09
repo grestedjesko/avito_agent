@@ -1,0 +1,129 @@
+# Правила планирования встреч
+# Настройки доступного времени для встреч с покупателями
+
+# Рабочие часы
+business_hours:
+  enabled: true
+  start_time: "09:00"  # Начало рабочего дня
+  end_time: "20:00"    # Конец рабочего дня
+  timezone: "Europe/Moscow"
+
+# Рабочие дни
+working_days:
+  monday: true
+  tuesday: true
+  wednesday: true
+  thursday: true
+  friday: true
+  saturday: true
+  sunday: false  # Воскресенье - выходной
+
+# Минимальное время подготовки (lead time)
+lead_time:
+  min_hours: 2  # Минимум 2 часа до встречи
+  max_days: 30  # Максимум 30 дней вперед
+
+# Длительность встречи
+meeting_duration:
+  default_minutes: 30
+  min_minutes: 15
+  max_minutes: 120
+
+# Интервалы между встречами
+intervals:
+  slot_duration_minutes: 30  # Слоты по 30 минут
+  buffer_minutes: 0  # Буфер между встречами (0 = встречи встык)
+
+# Обеденный перерыв
+lunch_break:
+  enabled: true
+  start_time: "13:00"
+  end_time: "14:00"
+
+# Специальные правила
+special_rules:
+  # Блокировка определенных дат (праздники, отпуск)
+  blocked_dates:
+    # - "2024-12-31"  # Новый год
+    # - "2025-01-01"
+    # - "2025-01-07"  # Рождество
+  
+  # Особые часы работы для конкретных дней недели
+  custom_hours:
+    # saturday:
+    #   start_time: "10:00"
+    #   end_time: "18:00"
+  
+  # Предпочтительные времена для встреч
+  preferred_times:
+    - "10:00"
+    - "11:00"
+    - "12:00"
+    - "14:00"
+    - "15:00"
+    - "16:00"
+    - "17:00"
+    - "18:00"
+    - "19:00"
+
+# Места встречи с доступностью
+meeting_locations:
+  metro_mayakovskaya:
+    name: "Метро Маяковская"
+    address: "Москва, м. Маяковская"
+    available_days: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+    available_hours:
+      start: "09:00"
+      end: "20:00"
+  
+  metro_belorusskaya:
+    name: "Метро Белорусская"
+    address: "Москва, м. Белорусская"
+    available_days: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+    available_hours:
+      start: "09:00"
+      end: "20:00"
+  
+  office_tverskaya:
+    name: "Офис на Тверской"
+    address: "Москва, ул. Тверская, 10"
+    available_days: ["monday", "tuesday", "wednesday", "thursday", "friday"]
+    available_hours:
+      start: "10:00"
+      end: "19:00"
+    notes: "Только в будние дни"
+  
+  tc_evropeyskiy:
+    name: "ТЦ Европейский"
+    address: "Москва, пл. Киевского Вокзала, 2"
+    available_days: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    available_hours:
+      start: "10:00"
+      end: "22:00"
+    notes: "Работает каждый день"
+
+# Автоматические напоминания
+reminders:
+  enabled: true
+  before_meeting:
+    - minutes: 60  # За час до встречи
+      method: "telegram"
+    - minutes: 1440  # За день до встречи (24 часа)
+      method: "telegram"
+
+# Конфликты и отмены
+conflicts:
+  allow_overlapping: false  # Не разрешать пересекающиеся встречи
+  auto_suggest_alternative: true  # Автоматически предлагать альтернативное время
+  cancellation_lead_time_hours: 1  # Минимум за час можно отменить
+
+# Сообщения для агента
+messages:
+  business_hours_violation: "Извините, мы работаем с {start} до {end}. Предложите другое время в эти часы."
+  non_working_day: "В {day} у нас выходной. Можем встретиться в другой день?"
+  too_soon: "Мне нужно как минимум {hours} часа для подготовки. Предложите время попозже."
+  too_far: "Слишком далекая дата. Давайте встретимся в ближайшие {days} дней?"
+  lunch_time: "В это время у меня обеденный перерыв. Можем в {start} или после {end}?"
+  location_unavailable: "В это место я могу приехать только {available_days}. Выберите другой день или место?"
+  conflict: "В это время у меня уже запланирована встреча. Подойдет {alternative_time}?"
+  suggest_slots: "Вот свободные слоты: {slots}. Какое время вам удобно?"
